@@ -1,5 +1,5 @@
-require "other_joins/version"
-
-module OtherJoins
-  # Your code goes here...
-end
+require 'active_record'
+require 'other_joins/version'
+require 'other_joins/other_joins_methods'
+require 'other_joins/active_record'
+require 'other_joins/left_join_dependency'
