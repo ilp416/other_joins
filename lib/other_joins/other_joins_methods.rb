@@ -7,7 +7,7 @@ module OtherJoinsMethods
       args,
       []
     )
-    joins(join_dependency)
+    joins(join_dependency.join_associations)
   end
 
 

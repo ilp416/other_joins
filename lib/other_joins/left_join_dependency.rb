@@ -3,7 +3,7 @@ module ActiveRecord
     class LeftJoinDependency < JoinDependency
 
       protected
-      def build(associations, base_klass)
+      def build(associations, parent = nil, join_type = Arel::OuterJoin)
         super
       end
 
