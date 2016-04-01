@@ -6,12 +6,12 @@ class OtherJoinsTest < MiniTest::Test
   end
 
   def test_AR_relation_has_left_joins_method
-    assert User.where(nil).methods.include?(:left_joins),
+    assert User.methods.include?(:left_joins),
       'Relation haven\'t method left_joins'
   end
 
   def test_AR_relation_has_left_join_method
-    assert User.where(nil).methods.include?(:outer_joins),
+    assert User.methods.include?(:outer_joins),
       'Relation haven\'t method outer_joins'
   end
 
