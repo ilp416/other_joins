@@ -5,7 +5,7 @@ module ActiveRecord
   end
 
   module Querying
-    delegate :left_join, :left_joins, to: :all
+    delegate :left_joins, :outer_joins, to: :all
   end
 
 end
