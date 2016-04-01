@@ -48,7 +48,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+It's very easy and intuitive:
+```ruby
+User.left_joins(:orders).group('users.name').count('orders.id')
+# SELECT COUNT(DISTINCT orders.id) AS count_orders_id,
+# users.name AS users_name
+# FROM "users"
+# LEFT OUTER JOIN "orders" ON "orders"."user_id" = "users"."id"
+# GROUP BY users.name
+ => {"Juan"=>0, "Nick"=>2, "Sandra"=>3}
+```
+Of course, you can use nested joins:
+```ruby
+User.left_joins(orders: :shop)
+# SELECT "users".* FROM "users"
+# LEFT OUTER JOIN "orders" ON "orders"."user_id" = "users"."id"
+# LEFT OUTER JOIN "shops" ON "shops"."id" = "orders"."shop_id"
+```
+Or array:
+```ruby
+Order.left_joins(:user, :shop)
+# SELECT "orders".* FROM "orders"
+# LEFT OUTER JOIN "users" ON "users"."id" = "orders"."user_id"
+# LEFT OUTER JOIN "shops" ON "shops"."id" = "orders"."shop_id"
+```
+And combine with standart `joins` method:
+```ruby
+Order.left_joins(:shop).joins(:user)
+# SELECT "orders".* FROM "orders"
+# INNER JOIN "users" ON "users"."id" = "orders"."user_id"
+# LEFT OUTER JOIN "shops" ON "shops"."id" = "orders"."shop_id"
+```
+You may use `outer_joins` method if it is more habitually for you. `outer_joins` is alias for `left_joins`
+If you want to take SQL-string, you shuold to use regular `joins` method.
 
 ## Development
 
