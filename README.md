@@ -38,7 +38,7 @@ Not difficult, but it is bored and ungracefully. Instinctively we want to use `l
 Add this line to your application's Gemfile:
 If you use ActiveRecord 3(Rails 3):
 ```ruby
-gem 'other_joins', github: 'ilp416/other_joins', branch: 'ar3'
+gem 'other_joins', github: 'ilp416/other_joins', branch: 'ActiveRecord-3'
 ```
 Otherwise look README of [other_branches](https://github.com/ilp416/other_joins/branches).
 
