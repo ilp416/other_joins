@@ -11,18 +11,17 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Some joins methods for ActiveRecord}
   spec.description   = %q{Add obvious `left_joins`, `outer_joins` methods to ActiveRecord as plain way to outer joins tables.}
-  spec.homepage      = "https://github.com/ilp416/other_joins"
-  spec.license       = "MIT"
+  spec.homepage      = 'https://github.com/ilp416/other_joins'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activerecord", "~> 4.1"
+  spec.add_dependency 'activerecord', '~> 4.1'
 
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "minitest"
-  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'bundler', '~> 1.10'
+  spec.add_development_dependency 'rake', '~> 11.1'
+  spec.add_development_dependency 'sqlite3', '~> 1.3'
 end
