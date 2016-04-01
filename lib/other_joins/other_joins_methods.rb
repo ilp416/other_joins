@@ -10,4 +10,7 @@ module OtherJoinsMethods
     joins(join_dependency)
   end
 
+
+  alias outer_joins left_joins
+
 end

@@ -10,6 +10,11 @@ class OtherJoinsTest < MiniTest::Test
       'Relation haven\'t method left_joins'
   end
 
+  def test_AR_relation_has_left_join_method
+    assert User.where(nil).methods.include?(:outer_joins),
+      'Relation haven\'t method outer_joins'
+  end
+
   def test_generating_left_outer_join_sql
     orig_sql = User.joins("LEFT OUTER JOIN \"orders\" ON \"orders\".\"user_id\" = \"users\".\"id\"").to_sql
     other_joins_sql = User.left_joins(:orders).to_sql
