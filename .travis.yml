@@ -1,4 +1,14 @@
 language: ruby
 rvm:
   - 2.2.3
+gemfile:
+  - gemfiles/activerecord_3.0.gemfile
+  - gemfiles/activerecord_3.2_.gemfile
+  - gemfiles/activerecord_4.0.gemfile
+  - gemfiles/activerecord_4.2_.gemfile
+  - gemfiles/activerecord_3.1.gemfile
+  - gemfiles/activerecord_3.2.gemfile 
+  - gemfiles/activerecord_4.1.gemfile
+  - gemfiles/activerecord_4.2.gemfile
 before_install: gem install bundler -v 1.10.6
+script: bundle exec rake test

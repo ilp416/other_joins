@@ -2,7 +2,7 @@
 
 Add obvious `left_joins`, `outer_joins` methods to ActiveRecord as plain way to join tables.
 
-This version works with ActiveRecord ~> 4.1 (4.1.x, 4.2.x). Check [branches](https://github.com/ilp416/other_joins/branches) for other ActiveRecord versions.
+This version works with ActiveRecord (3.0.x - 4.2.x).
 
 ## Introdution
 Usually to join tables in Rails app you use something like this:
@@ -34,12 +34,10 @@ Not difficult, but it is bored and ungracefully. Instinctively we want to use `l
 
 ## Installation
 
-If you use ActiveRecord(Rails) 4.1.x, 4.2.x, add this line to your application's Gemfile:
+Add this line to your application's Gemfile:
 ```ruby
-gem 'other_joins', github: 'ilp416/other_joins', branch: 'ActiveRecord-4.1-4.2'
+gem 'other_joins'
 ```
-Otherwise look README of [other_branches](https://github.com/ilp416/other_joins/branches).
-
 And then execute:
 
     $ bundle

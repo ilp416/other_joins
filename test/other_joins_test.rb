@@ -1,6 +1,16 @@
 require 'test_helper'
 
-class OtherJoinsTest < MiniTest::Test
+
+case ActiveRecord::OTHER_JOINS_WAY
+when 3, 4.0
+  class OtherJoinsTest < MiniTest::Unit::TestCase
+  end
+when 4.1
+  class OtherJoinsTest < MiniTest::Test
+  end
+end
+
+class OtherJoinsTest
   def test_that_it_has_a_version_number
     refute_nil ::OtherJoins::VERSION
   end
