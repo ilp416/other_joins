@@ -1,5 +1,7 @@
 # OtherJoins
 
+[![Code Climate](https://codeclimate.com/github/ilp416/other_joins/badges/gpa.svg)](https://codeclimate.com/github/ilp416/other_joins)
+
 Add obvious `left_joins`, `outer_joins` methods to ActiveRecord as plain way to join tables.
 
 This version works with ActiveRecord (3.0.x - 4.2.x).
