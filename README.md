@@ -1,6 +1,8 @@
 # OtherJoins
 
-[![Code Climate](https://codeclimate.com/github/ilp416/other_joins/badges/gpa.svg)](https://codeclimate.com/github/ilp416/other_joins)
+[![Travis](https://img.shields.io/travis/ilp416/other_joins.svg)](https://travis-ci.org/ilp416/other_joins)
+[![Code Climate](https://img.shields.io/codeclimate/github/ilp416/other_joins.svg)](https://codeclimate.com/github/ilp416/other_joins/coverage)
+[![Gem](https://img.shields.io/gem/v/other_joins.svg)](https://rubygems.org/gems/other_joins)
 
 Add obvious `left_joins`, `outer_joins` methods to ActiveRecord as plain way to join tables.
 
